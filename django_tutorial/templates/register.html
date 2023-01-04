@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div id="warp-1">
+  <form method="post" action=".">
+    {% csrf_token %}
+    {{ form.as_p }}
+        
+    <button name="submit">register</button>
+    <input type="hidden" name="next" value="註冊" />
+  </form>
+</div>
+    
+{% endblock %}
